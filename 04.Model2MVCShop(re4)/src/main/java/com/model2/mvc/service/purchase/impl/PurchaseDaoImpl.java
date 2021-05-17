@@ -17,7 +17,6 @@ public class PurchaseDaoImpl implements PurchaseDao {
 	@Autowired
 	@Qualifier("sqlSessionTemplate")
 	private SqlSession sqlSession;
-	
 	public void setSqlSession(SqlSession sqlSession) {
 		this.sqlSession = sqlSession;
 	}
@@ -34,6 +33,7 @@ public class PurchaseDaoImpl implements PurchaseDao {
 
 	@Override
 	public Purchase getPurchase(int tranNo) throws Exception {
+		System.out.println("getPurchase: "+tranNo);
 		return sqlSession.selectOne("PurchaseMapper.getPurchase",tranNo);
 	}
 

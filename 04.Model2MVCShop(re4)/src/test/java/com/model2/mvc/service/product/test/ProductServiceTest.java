@@ -36,7 +36,7 @@ public class ProductServiceTest {
 		product.setPrice(1000);
 		product.setFileName("x");
 		
-		System.out.println("��ǰ �߰� Ȯ��: "+product);
+		System.out.println("占쏙옙품 占쌩곤옙 확占쏙옙: "+product);
 		
 		productService.addProduct(product);
 		
@@ -75,7 +75,7 @@ public class ProductServiceTest {
 		product.setFileName("new");
 		
 		
-		System.out.println("update Product 조회  : "+product);
+		System.out.println("update Product 議고쉶  : "+product);
 		
 		Assert.assertNotNull(product);
 	
@@ -93,7 +93,7 @@ public class ProductServiceTest {
 		List<Object> list = (List<Object>)map.get("list");
 	 	//Assert.assertEquals(3, list.size());
 	 	
-		System.out.println("product쿼리문 조회 : "+list);
+		System.out.println("product 리스트 : "+list);
 		
 		Integer totalCount = (Integer)map.get("totalCount");
 	 	System.out.println(totalCount);
@@ -109,7 +109,7 @@ public class ProductServiceTest {
 	 	System.out.println("product search: "+search);
 	 	//Assert.assertEquals(3, list.size());
 	 	
-	 	System.out.println("product List 조회: "+list);
+	 	System.out.println("product List 리스트: "+list);
 	 	
 	 	totalCount = (Integer)map.get("totalCount");
 	 	System.out.println(totalCount);
@@ -121,6 +121,6 @@ public class ProductServiceTest {
 		
 		int remove = productService.removeProduct("testProduct");
 		
-		System.out.println("상품삭제: "+remove);
+		System.out.println(" 상품 바이바이 : "+remove);
 	}
 }

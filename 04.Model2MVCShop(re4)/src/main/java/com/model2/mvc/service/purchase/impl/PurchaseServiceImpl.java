@@ -17,8 +17,7 @@ public class PurchaseServiceImpl implements PurchaseService {
 	@Autowired
 	@Qualifier("purchaseDaoImpl")
 	private PurchaseDao purchaseDao;
-	
-	public void setProductDao(PurchaseDao purchaseDao) {
+	public void setPurchaseDao(PurchaseDao purchaseDao) {
 		this.purchaseDao = purchaseDao;
 	}
 
