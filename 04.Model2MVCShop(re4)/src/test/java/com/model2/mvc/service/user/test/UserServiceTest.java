@@ -76,10 +76,10 @@ public class UserServiceTest {
 		
 		user = userService.getUser("testUserId");
 
-		//==> console 확占쏙옙
+		//==> console 확인
 		System.out.println(user);
 		
-		//==> API 확占쏙옙
+		//==> API 확인 
 		Assert.assertEquals("testUserId", user.getUserId());
 		Assert.assertEquals("testUserName", user.getUserName());
 		Assert.assertEquals("testPasswd", user.getPassword());
@@ -112,10 +112,10 @@ public class UserServiceTest {
 		user = userService.getUser("testUserId");
 		Assert.assertNotNull(user);
 		
-		//==> console 확占쏙옙
+		//==> console 확인
 		System.out.println(user);
 			
-		//==> API 확占쏙옙
+		//==> API 확인
 		Assert.assertEquals("change", user.getUserName());
 		Assert.assertEquals("777-7777-7777", user.getPhone());
 		Assert.assertEquals("change", user.getAddr());
@@ -125,7 +125,7 @@ public class UserServiceTest {
 	//@Test
 	public void testCheckDuplication() throws Exception{
 
-		//==> 占십울옙占싹다몌옙...
+		//==> 필요하다면 
 //		User user = new User();
 //		user.setUserId("testUserId");
 //		user.setUserName("testUserName");
@@ -137,17 +137,17 @@ public class UserServiceTest {
 //		
 //		userService.addUser(user);
 		
-		//==> console 확占쏙옙
+		//==> console 확인 
 		System.out.println(userService.checkDuplication("testUserId"));
 		System.out.println(userService.checkDuplication("testUserId"+System.currentTimeMillis()) );
 	 	
-		//==> API 확占쏙옙
+		//==> API 확인 
 		Assert.assertFalse( userService.checkDuplication("testUserId") );
 	 	Assert.assertTrue( userService.checkDuplication("testUserId"+System.currentTimeMillis()) );
 		 	
 	}
 	
-	 //==>  占쌍쇽옙占쏙옙 풀占쏙옙 占쏙옙占쏙옙占싹몌옙....
+	 //==>  필요하다면 
 	 //@Test
 	 public void testGetUserListAll() throws Exception{
 		 
@@ -159,7 +159,7 @@ public class UserServiceTest {
 	 	List<Object> list = (List<Object>)map.get("list");
 	 	Assert.assertEquals(3, list.size());
 	 	
-		//==> console 확占쏙옙
+		//==> console 확인 
 	 	System.out.println("유저 리스트 조회"+list);
 	 	
 	 	Integer totalCount = (Integer)map.get("totalCount");
@@ -184,7 +184,7 @@ public class UserServiceTest {
 	 	list = (List<Object>)map.get("list");
 	 	Assert.assertEquals(3, list.size());
 	 	
-	 	//==> console 확占쏙옙
+	 	//==> console 확인 
 	 	System.out.println(list);
 	 	
 	 	totalCount = (Integer)map.get("totalCount");
@@ -204,7 +204,7 @@ public class UserServiceTest {
 	 	List<Object> list = (List<Object>)map.get("list");
 	 	Assert.assertEquals(1, list.size());
 	 	
-		//==> console 확占쏙옙
+		//==> console 확인 
 	 	System.out.println(list);
 	 	
 	 	Integer totalCount = (Integer)map.get("totalCount");
@@ -239,7 +239,7 @@ public class UserServiceTest {
 	 	List<Object> list = (List<Object>)map.get("list");
 	 	Assert.assertEquals(3, list.size());
 	 	
-		//==> console 확占쏙옙
+		//==> console 확인 
 	 	System.out.println(list);
 	 	
 	 	Integer totalCount = (Integer)map.get("totalCount");
@@ -254,7 +254,7 @@ public class UserServiceTest {
 	 	list = (List<Object>)map.get("list");
 	 	Assert.assertEquals(0, list.size());
 	 	
-		//==> console 확占쏙옙
+		//==> console 확인 
 	 	System.out.println(list);
 	 	
 	 	totalCount = (Integer)map.get("totalCount");

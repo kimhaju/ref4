@@ -36,7 +36,7 @@ public class ProductServiceTest {
 		product.setPrice(1000);
 		product.setFileName("x");
 		
-		System.out.println("占쏙옙품 占쌩곤옙 확占쏙옙: "+product);
+		System.out.println("상품 추가 : "+product);
 		
 		productService.addProduct(product);
 		
@@ -75,7 +75,7 @@ public class ProductServiceTest {
 		product.setFileName("new");
 		
 		
-		System.out.println("update Product 議고쉶  : "+product);
+		System.out.println("update Product 상품 업데이트  : "+product);
 		
 		Assert.assertNotNull(product);
 	
