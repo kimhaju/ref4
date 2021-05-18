@@ -44,8 +44,7 @@ public class PurchaseDaoImpl implements PurchaseDao {
 
 	@Override
 	public Map<String, Object> getPurchaseList(Search search, String buyerId) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		return sqlSession.selectMap("PurchaseMapper.getPurchaseList",search, buyerId);
 	}
 
 	@Override

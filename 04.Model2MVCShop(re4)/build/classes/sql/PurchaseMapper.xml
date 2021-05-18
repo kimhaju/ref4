@@ -58,9 +58,19 @@
 		FROM transaction
 		WHERE tran_no = #{tranNo}
 	 </select>
+	 
 	 <select id="getPurchase2" parameterType="int" resultMap="purchaseSelectMap">
 	  SELECT * FROM transaction t, product p 
 	 WHERE p.prod_no = t.prod_no AND p.prod_no = #{value}
+	 </select>
+	 
+	 <select id="getPurchaseList" parameterType="purchase" resultMap="purchaseSelectMap">
+	 SELECT * FROM (		SELECT inner_table. * ,  ROWNUM AS row_seq 
+	  	FROM (	SELECT * FROM users u, transaction t 
+	  	WHERE u.user_id = t.buyer_id AND u.user_id= #{buyerId}
+	  	  ORDER BY dlvy_date ) inner_table
+	  	 	WHERE ROWNUM &lt;= #{endRowNum} ) 
+	  	 	WHERE row_seq BETWEEN  #{startRowNum} AND #{endRowNum} 
 	 </select>
 	
 	 
