@@ -66,7 +66,6 @@ public class PurchaseServiceTest {
 	}
 	
 	@Test
-
 	public void testGetPurchaseListAll() throws Exception{
 
 		Search search = new Search();

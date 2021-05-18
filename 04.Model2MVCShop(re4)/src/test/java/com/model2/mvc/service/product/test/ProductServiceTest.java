@@ -80,7 +80,7 @@ public class ProductServiceTest {
 		Assert.assertNotNull(product);
 	
 	}
-	//@Test
+	@Test
 	public void testGetProductListAll() throws Exception{
 		
 		Search search = new Search();
